@@ -1,7 +1,7 @@
 # Maintainer: Aaron Bassett <abassett@qnx.com>
 pkgname=lxde-icon-theme
 pkgver=0.5.2
-pkgrel=0
+pkgrel=${pkgrel:-0}
 pkgdesc="lxde icon theme"
 url="https://github.com/lxde/lxde-icon-theme/"
 arch="noarch"
@@ -28,6 +28,7 @@ package() {
 }
 
 
+options="$options ${DISABLE_CHECK:+!check}"
 sha512sums="
 36d72e1214ad73c56212eae893af250dde181c2e1c14b36327abc4628ab5432330e1cb86a0c33c5f559898d230ba498c60128f4a07fa98b2b467a719be242d33  lxde-icon-theme-0.5.2.tar.gz
 7f2e21d05939d118f6f37c61855ddef9482ae8291005e61a03ad81fea9ba42b9af83477e379e42da0f53404fa6178e8d75d6a6fcb3ea6a931de5284bf90c3c8c  qnx-fix.patch
